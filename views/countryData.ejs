@@ -19,17 +19,24 @@
         <button type="submit">Show Country Data</button>
     </form>
 
-    <p>Country name: <%= countryData.countryName %></p>
-    <p>Country top level domain: <%= countryData.countryTopLevelDomain %></p>
-    <p>Country calling code is <%= countryData.countryCallingCode %></p>
-    <p>Country capital is <%= countryData.countryCapital %></p>
-    <p>Country region is <%= countryData.countryRegion %> and the subregion is <%= countryData.countrySubRegion %></p>
-    <p>Country population is <%= countryData.countryPopulation %></p>
-    <p>Country timezone is <%= countryData.countryTimezone %></p>
-    <p>Country language in English is <%= countryData.countryLanguageInEnglish %></p>
-    <p>Country currency code is <%= countryData.countryCurrencyCode %></p>
-    <p>Country currency name is <%= countryData.countryCurrencyName %></p>
-    <p>Country currency symbol is <%= countryData.countryCurrencySymbol %></p>
-    <img src="<%= countryData.countryFlagUrl %>" alt="Flag">
+    <h1>Country: <%= countryData.countryName %></h1>
+    <div class="divider" id="countryInfo">
+        <p>Top Level Domain: <%= countryData.countryTopLevelDomain %></p>
+        <p>Calling Dode: <%= countryData.countryCallingCode %></p>
+        <p>Capital: <%= countryData.countryCapital %></p>
+        <p>Region: <%= countryData.countryRegion %> </p>
+        <p>Subregion: <%= countryData.countrySubRegion %></p>
+        <p>Population: <%= countryData.countryPopulation %></p>
+        <p>Timezone: <%= countryData.countryTimezone %></p>
+        <p>Language in English: <%= countryData.countryLanguageInEnglish %></p>
+        <p>Currency Code: <%= countryData.countryCurrencyCode %></p>
+        <p>Currency Name: <%= countryData.countryCurrencyName %></p>
+        <p>Currency Symbol: <%= countryData.countryCurrencySymbol %></p>
+    </div>
+    <div class="divider" id="countryFlag">
+        <img src="<%= countryData.countryFlagUrl %>" alt="Flag" id="flag">
+    </div>
+    
+    
 </body>
 </html>
