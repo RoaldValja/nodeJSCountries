@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <title>NodeJS Countries Data</title>
+</head>
+<body>
+    <h3>Display Country Data</h3>
+
+    <form action="/countries" method="post">
+        <select name="country">
+            <option value="Estonia">Estonia</option>
+            <option value="Latvia">Latvia</option>
+            <option value="Lithuania">Lithuania</option>
+        </select>
+        <button type="submit">Show Country Data</button>
+    </form>
+
+    <p>Country name: <%= countryData.countryName %></p>
+    <p>Country top level domain: <%= countryData.countryTopLevelDomain %></p>
+    <p>Country calling code is <%= countryData.countryCallingCode %></p>
+    <p>Country capital is <%= countryData.countryCapital %></p>
+    <p>Country region is <%= countryData.countryRegion %> and the subregion is <%= countryData.countrySubRegion %></p>
+    <p>Country population is <%= countryData.countryPopulation %></p>
+    <p>Country timezone is <%= countryData.countryTimezone %></p>
+    <p>Country language in English is <%= countryData.countryLanguageInEnglish %></p>
+    <p>Country currency code is <%= countryData.countryCurrencyCode %></p>
+    <p>Country currency name is <%= countryData.countryCurrencyName %></p>
+    <p>Country currency symbol is <%= countryData.countryCurrencySymbol %></p>
+    <img src="<%= countryData.countryFlagUrl %>" alt="Flag">
+</body>
+</html>
