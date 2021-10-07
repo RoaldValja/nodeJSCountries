@@ -33,15 +33,16 @@ app.post('/countries', (req, res)=>{
             countryTopLevelDomain: response.data[0].topLevelDomain,
             countryCallingCode : response.data[0].callingCodes,
             countryCapital : response.data[0].capital,
-            countryRegion : response.data[0].continent,
-            countrySubRegion : response.data[0].region,
+            countryRegion : response.data[0].region,
+            countrySubRegion : response.data[0].subregion,
             countryPopulation : response.data[0].population,
             countryTimezone : response.data[0].timezones,
             countryLanguageInEnglish : response.data[0].languages[0].name,
             countryCurrencyCode : response.data[0].currencies[0].code,
             countryCurrencyName : response.data[0].currencies[0].name,
             countryCurrencySymbol : response.data[0].currencies[0].symbol,
-            countryFlagUrl : response.data[0].flags[1]
+            //countryFlagUrl : response.data[0].flags[1]
+            countryFlagUrl : response.data[0].flag
         }
         console.log(countryData);
         res.render('countryData.ejs', {countryData: countryData});
@@ -51,7 +52,11 @@ app.post('/countries', (req, res)=>{
     });
     
 });
-
+/*
 app.listen(3000, ()=>{
     console.log('Server is running on port 3000');
+});
+*/
+app.listen(process.env.PORT || 3000, ()=>{
+    console.log('Server has started.');
 });
